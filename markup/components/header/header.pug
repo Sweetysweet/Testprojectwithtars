@@ -1,0 +1,54 @@
+mixin header(data = {})
+  -
+    // Globals: SITE_TITLE, DEFS, MENU, MENU_PROFILE
+
+    const {
+      menuProfileActiveIndex,
+      menuActiveIndex
+    } = DEFS;
+
+  header.header
+   header.d-flex-r.clear.justify-content-space-between
+  #logo.my-1
+    a(href='index.html')
+      img(src='img/logo%20(1).png')
+  nav#main-navbar.f1_right.font-xs.text-uppercase
+    ul.clear
+      li.active
+        a(href='index.html') Главная
+      li
+        a.drop(href='#') Отели
+        // Level 1 links
+        ul
+          li
+            a(href='#') Lorem Ipson Dolor
+          li
+            a(href='#') Lorem Ipson Dolor
+          li
+            a(href='#') Lorem Ipson Dolor
+          li
+            a(href='#') Lorem Ipson Dolor
+      li
+        a.drop(href='#') Наборы
+        // Level 2 links
+        ul
+          li
+            a(href='#') Level 2
+          li
+            a.drop(href='#') Level 2 + Drop
+            // Level 3 links
+            ul
+              li
+                a(href='#') Level 3
+              li
+                a(href='#') Level 3
+              li
+                a(href='#') Level 3
+          li
+            a(href='#') Level 2
+      li
+        a(href='#') Страхование
+      li
+        a(href='#') Блог
+      li
+        a(href='#') Контакты

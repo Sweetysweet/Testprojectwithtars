@@ -1,0 +1,89 @@
+mixin footer(data= {})
+  -
+    // Globals: COMPANY_NAME, DEFS, MENU Футер собран из файла index.html landings 2 после footer.footer(...)
+
+    const {
+      menuActiveIndex
+    } = DEFS;
+
+    const {
+      className = ''
+    } = data;
+
+ 
+  footer.footer(class=className)
+    .wrapper.bg-green
+  footer#main-footer.d-flex-r.clear.container.text-white
+    .mx-2
+      h6.heading.font-x1.m-1 Contact Us
+      ul.nospace.linkedlist.contact
+        li
+          i.fa.fa-map-marker
+          address Street Name &amp; Number, Town, Postcode/Zip
+        li
+          i.fa.fa-phone
+          |  +00 (123) 456 7890
+        li
+          i.fa.fa-envelope-o
+          | gsm_v@mail.ru
+        li
+          a.text-white(href='https://www.instagram.com/mishki_iz_rose_14/', target='_blank')
+            i.fa.fa-instagram
+            | mishki_iz_roze_14
+    .mx-2
+      h6.heading.my-1.font-x1 About
+      ul.nospace.linkedlist
+        li
+          a(href='#') Company Profile
+        li
+          a(href='#') Sales
+        li
+          a(href='#') Support
+        li
+          a(href='#') Blog
+    .mx-2
+      h6.heading.my-1.font-x1 Company
+      ul.nospace.linkedlist
+        li
+          a(href='#') Carrers
+        li
+          a(href='#') Investors
+        li
+          a(href='#') About Company
+        li
+          a(href='#') Privacy
+    #subscribe.mx-2
+      h6.heading.my-1.font-x1 Subscribe
+      p.my-1 Lorem Ipsum Dolor
+      form(method='post', action='#')
+        fieldset
+          input.my-1(type='text', placeholder='Name')
+          input.my-1(type='email', placeholder='Email')
+          button.btn Submit
+    #instafeed.mx-2
+      h6.heading.my-1.font-x1 InstaFeed
+      .d-flex-r.my-1
+        a(href='#')
+          img.mx-1(src='img/india.jpg')
+        a(href='#')
+          img(src='img/usa.jpg')
+      .d-flex-r.my-1
+        a(href='#')
+          img.mx-1(src='img/france.jpg')
+        a(href='#')
+          img(src='img/russia.jpg')
+      .d-flex-r.my-1
+        a(href='#')
+          img.mx-1(src='img/china.jpg')
+        a(href='#')
+          img(src='img/turkey.jpg')
+  #copyright.d-flex-r.clear.justify-content-space-between
+    p.d-flex-r
+      | Copyright &copy; 2019 - All Right Reserved - 
+      a(href='#') Sergery gushchin
+    a#backtotop(href='#MyPage')
+      i.fa.fa-chevron-up
+    p.d-flex-r
+      | Template by 
+      a(href='https://vk.com/serega_cwalk_2034', target='_blank', title='Sergey Gushchin') Sergey Gushchin
+

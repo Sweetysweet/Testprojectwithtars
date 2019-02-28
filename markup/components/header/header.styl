@@ -1,0 +1,54 @@
+mixinHeader()
+  $headerHeight = 11rem
+  $headerHeightTablet = 8rem
+  $headerHeightMobile = 5rem
+
+  $headerPadding = 2rem 0
+
+  @supports(position:sticky)
+    .page__header
+      position sticky
+      top 0
+      z-index 100
+
+
+  .header
+    background $white
+    position relative
+    color $black
+    border-bottom 1px solid silver
+
+    .container
+      display flex
+      align-items center
+      justify-content space-between
+
+    .menu
+      &_nav
+        display flex
+        li
+          margin 0 0 0 2rem
+          text-transform uppercase
+
+    a
+      color $black
+
+    .logo
+      font-size 2rem
+      text-transform uppercase
+
+  @media $desktop
+    .header
+      height $headerHeight
+
+  @media $tablet
+    .header
+      height $headerHeightTablet
+
+  @media $mobile
+    .header
+      height $headerHeightMobile
+      .menu
+        display none
+
+mixinHeader()

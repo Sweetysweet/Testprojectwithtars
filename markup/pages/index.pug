@@ -1,0 +1,17 @@
+//- pageTitle: Главная
+//- pageCategory: Страницы
+//- date: 12.12.2018
+//- status: wait
+
+extends ../layouts/layout.pug
+
+append vars
+  -
+    setDefs({
+      pageTitle: 'Главная страница сайта',
+      menuActiveIndex: 0
+    })
+
+block content
+  +section()
+    h1.title--h1 Главная

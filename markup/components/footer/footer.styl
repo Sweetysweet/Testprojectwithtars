@@ -1,0 +1,126 @@
+mixinFooter()
+
+  $footerHeight = 11rem
+  $footerHeightTablet = 8rem
+  $footerHeightMobile = 5rem
+
+  #main-footer
+  border-bottom 1px solid white
+  .linkedlist
+    li
+      margin-bottom 5px
+      border-color rgba(255,255,255,0.2)
+      &:last-child
+        margin 0
+        border none
+        padding 0
+  .contact
+    li
+      i
+        display block
+        position absolute
+        top 0
+        left 0
+        width 30px
+        font-size 16px
+        text-align center
+  input
+    width 100%
+    padding 8px
+    color #FFF
+    background-color #555
+    &:focus
+      border-color #57ADC4
+  ul
+    li
+      a
+        color #FFF
+  & > #instafeed
+    img
+      height 2.5rem
+
+#main-footer .contact.linkedlist li, #main-footer .contact.linkedlist li:last-child
+  position relative
+  padding-left 40px
+
+#main-footer input, #main-footer button
+  border 1px solid white
+
+address
+  display block
+  margin 0
+  padding 0
+  font-style normal
+  font-weight normal
+
+form, fieldset
+  margin 0
+  padding 0
+  border none
+
+input, button
+  display block
+  resize none
+  outline none
+  font-size inherit
+  font-family inherit
+  vertical-align middle
+
+#copyright
+  padding 20px 0
+  a
+    color white
+  *
+    margin 0
+    padding 0
+
+#backtotop
+  color #FFF
+  background-color #57ADC4
+  z-index 999
+  display inline-block
+  position fixed
+  bottom 20px
+  right 20px
+  width 36px
+  height 36px
+  line-height 36px
+  font-size 1rem
+  text-align center
+  opacity 0.3
+  i
+    display block
+    width 100%
+    height 100%
+    line-height inherit
+  &:hover
+    opacity 1
+
+  @media $desktop
+    .footer
+      min-height $footerHeight
+
+      a
+        &:hover
+          color $gray
+
+      .create
+        a
+          color $white
+          &:hover
+            svg
+              color $mikes-pink
+
+  @media $tablet
+    .footer
+      .copyright
+      .create
+        margin 3rem 0 0 0
+
+  @media $mobile
+    .footer
+      .copyright
+      .create
+        margin 2rem 0 0 0
+
+mixinFooter()
